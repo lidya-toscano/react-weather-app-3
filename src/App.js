@@ -4,11 +4,11 @@ import Weather from "./Weather";
 export default function App() {
   return (
     <div className="App">
-      <Weather />
+      <Weather defaultCity="San Diego" />
       <footer>
         <h5>
           <a
-            href="https://github.com/lidya-toscano/react-weather-app"
+            href="https://github.com/lidya-toscano/react-weather-app-3"
             target="nonreferrer"
           >
             Open-Source Code

@@ -144,7 +144,6 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "dd829780897d9a6ff8d9b384c094215b";
-    let city = "San Diego";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
