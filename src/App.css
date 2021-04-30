@@ -94,15 +94,7 @@ input {
   padding: 25px 0 25px 0;
 }
 
-.row.next {
-  text-align: center;
-}
-
 .wrapper {
   max-width: 800px;
   margin: 30px auto;
-}
-
-.icon-next {
-  width: 50px;
 }

@@ -11,7 +11,7 @@ export default function WeatherInfo(props) {
             <FormattedDate date={props.data.date} />
           </h4>
           <div className="WeatherIcon">
-            <WeatherIcon code={props.data.icon} size={45} />
+            <WeatherIcon code={props.data.icon} size={60} />
           </div>
           <h2>{props.data.city}</h2>
           <div className="description text-capitalize">

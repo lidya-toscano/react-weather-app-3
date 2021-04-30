@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./App.css";
 import axios from "axios";
 
@@ -9,6 +10,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
@@ -80,64 +82,7 @@ export default function Weather(props) {
 
         <WeatherInfo data={weatherData} />
 
-        <div className="row next">
-          <div className="col-md-2 ms-auto">
-            <div className="dateNext">00:00</div>
-            <img
-              src="images/angry-sun.png"
-              alt="Current Temperature Icon"
-              className="icon"
-              width="30px"
-            />
-            <div className="tempNext">Max: 85°</div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-2 ms-auto">
-            <div className="dateNext">00:00</div>
-            <img
-              src="images/angry-sun.png"
-              alt="Current Temperature Icon"
-              className="icon"
-              width="30px"
-            />
-            <div className="temp-next">Max: 85°</div>
-          </div>
-
-          <div className="col-md-2 ms-auto">
-            <div className="dateNext">00:00</div>
-            <img
-              src="images/angry-sun.png"
-              alt="Current Temperature Icon"
-              className="icon"
-              width="30px"
-            />
-            <div className="temp-next">Max: 85°</div>
-          </div>
-
-          <div className="col-md-2 ms-auto">
-            <div className="dateNext">00:00</div>
-            <img
-              src="images/angry-sun.png"
-              alt="Current Temperature Icon"
-              className="icon"
-              width="30px"
-            />
-            <div className="temp-next">Max: 85°</div>
-          </div>
-
-          <div className="col-md-2 ms-auto">
-            <div className="dateNext">00:00</div>
-            <img
-              src="images/angry-sun.png"
-              alt="Current Temperature Icon"
-              className="icon"
-              width="30px"
-            />
-            <div className="temp-next">Max: 85°</div>
-          </div>
-        </div>
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
