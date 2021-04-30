@@ -14,7 +14,7 @@ export default function App() {
             Open-Source Code
           </a>{" "}
           by{" "}
-          <a href="https://www.lidyatoscano.com/" target="_blank">
+          <a href="https://www.lidyatoscano.com/" target="nonreferrer">
             Lidya Toscano
           </a>
         </h5>
